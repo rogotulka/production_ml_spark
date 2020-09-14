@@ -1,0 +1,4 @@
+lectures/*
+seminars/*
+hw/mlruns/*
+*/.ipynb_checkpoints/*
