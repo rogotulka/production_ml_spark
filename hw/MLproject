@@ -10,4 +10,13 @@ entry_points:
         parameters:
           ratings_csv: path
           max_row_limit: {type:int, default: 100000}
-        command: "python etl_data.py --rating_csv {rating_csv} --max-row-limit {max_row_limit}"
+        command: "python etl_data.py --ratings_csv {ratings_csv} --max_row_limit {max_row_limit}"
+        
+    als:
+        parameters:
+          ratings_data: path
+          max_iter: {type:int, default: 10}
+          reg_param: {type:float, default: 0.1}
+          rank: {type:int, default: 12}
+        command: "python als.py --ratings_data {ratings_data} --max_iter {max_iter} --reg_param {reg_param} --rank {rank}"
+        
